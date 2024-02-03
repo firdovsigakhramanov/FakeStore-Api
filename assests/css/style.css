@@ -197,7 +197,7 @@ header > section:first-child {
   width: 350px;
   height: 100vh;
   background-color: white;
-  box-shadow: inset 0px 0px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
   overflow: auto;
 }
 
@@ -216,6 +216,7 @@ aside {
   width: 20px;
   cursor: pointer;
 }
+
 
 .cart-item {
   display: flex;
@@ -238,7 +239,17 @@ aside {
 }
 
 .cart__item-count {
-  width: 50px;
+  width: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.cart__item-count::-webkit-outer-spin-button,
+.cart__item-count::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /*? ---------------------- Media Screen -------------------- */
@@ -264,5 +275,3 @@ aside {
     margin: 0 auto;
   }
 }
-
-
