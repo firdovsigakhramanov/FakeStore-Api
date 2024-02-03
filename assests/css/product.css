@@ -10,19 +10,32 @@
   margin: 20px auto;
 }
 
+.btn {
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .top-bar {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+  padding: 20px 0;
+}
+
+.top-bar__container {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .top-bar__left {
-  background-color: orange;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
-  border-radius: 5px;
+  padding: 3px 10px;
+  border: 0;
+  cursor: pointer;
 }
 
 .top-bar__left > img {
@@ -36,11 +49,21 @@
   gap: 5px;
   font-size: 20px;
   align-items: center;
-  background-color: orange;
+  background-color: black;
   color: white;
   padding: 4px 10px;
   border-radius: 5px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.top-bar__cart-icon {
+  display: flex;
+  padding: 3px;
+}
+
+.top-bar__cart-icon > img {
+  width: 25px;
 }
 
 .top-bar__right {
@@ -48,14 +71,6 @@
   gap: 20px;
   align-items: center;
   justify-content: space-between;
-}
-
-.top-bar__cart-icon {
-  display: flex;
-}
-
-.top-bar__cart-icon > img {
-  width: 20px;
 }
 
 /* ?------------------ Card ------------------- */
@@ -84,7 +99,9 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
 
 .card-raiting {
@@ -108,13 +125,45 @@
 .card-button {
   padding: 10px;
   width: fit-content;
-  background-color: orange;
+  background-color: black;
   border: none;
   color: white;
   font-weight: bold;
   font-size: 18px;
 }
 
+.card-price {
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
+}
+
 .card-description {
   font-size: 20px;
+}
+
+/*? ---------------------- Media Screen -------------------- */
+
+@media (max-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+  }
+
+  .card-img {
+    width: 80%;
+    border: 0;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .card-content {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
 }

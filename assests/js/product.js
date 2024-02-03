@@ -8,27 +8,27 @@ fetch(`https://fakestoreapi.com/products/${params1}`)
     console.log(data);
 
     card.innerHTML += `
-      <div class="card-img">
+        <div class="card-img">
           <img
             src="${data.image}"
             alt=""
           />
         </div>
         <div class="card-content">
-          <h1 class="card-title">
-          ${data.title}
-          </h1>
-          <button class="card-button">Add to cart</button>
-          <p class="card-price">$${data.price}</p>
-          <div class="card-raiting">
-            <p>${data.rating.rate}</p>
-            <div class="card-raiting__img">
-              <img src="./assests/images/star-solid.svg" alt="" />
-            </div>
-          </div>
-          <p class="card-description">
-          ${data.description}
-          </p>
+           <h1 class="card-title">
+               ${data.title}
+           </h1>
+           <button class="card-button btn">Add to cart</button>
+           <p class="card-price">$${data.price}</p>
+           <div class="card-raiting">
+               <p>${data.rating.rate}</p>
+               <div class="card-raiting__img">
+                   <img src="./assests/images/star-solid.svg" alt="" />
+               </div>
+           </div>
+           <p class="card-description">
+               ${data.description}
+           </p>
         </div>
       `;
   });
