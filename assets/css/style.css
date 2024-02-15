@@ -39,6 +39,7 @@ header > section:first-child {
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+  position: relative;
 }
 
 .top-bar__logo {
@@ -78,6 +79,24 @@ header > section:first-child {
 .top-bar__cart-icon {
   display: flex;
   padding: 3px;
+}
+
+.top-bar__notification {
+  display: none;
+}
+
+.top-bar__notification.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: orange;
+  font-size: 12px;
 }
 
 .top-bar__cart-icon > img {
@@ -199,6 +218,8 @@ header > section:first-child {
   background-color: white;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
   overflow: auto;
+  animation-name: asideAnimation;
+  animation-duration: 1s;
 }
 
 aside {
@@ -217,13 +238,13 @@ aside {
   cursor: pointer;
 }
 
-
 .cart-item {
   display: flex;
-  padding: 10px;
+  padding: 10px 15px;
   align-items: center;
-  gap: 10px;
+  justify-content: space-evenly;
   box-shadow: 10px 10px 10px -10px rgba(12, 13, 19, 0.2);
+  gap: 10px;
 }
 
 .cart-image img {
@@ -252,6 +273,29 @@ aside {
   margin: 0;
 }
 
+.cart-delete > img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.cart-footer {
+  width: 80%;
+  display: flex;
+  gap: 10px;
+  padding: 25px;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  background-color: #fafafa;
+  color: red;
+  font-size: 22px;
+}
+
+.cart-footer > span {
+  font-weight: bold;
+}
+
 /*? ---------------------- Media Screen -------------------- */
 
 @media (max-width: 768px) {
@@ -273,5 +317,14 @@ aside {
     order: 1;
     width: 100%;
     margin: 0 auto;
+  }
+}
+
+@keyframes asideAnimation {
+  from {
+    right: -350px;
+  }
+  to {
+    right: 0;
   }
 }

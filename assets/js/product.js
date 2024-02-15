@@ -23,7 +23,7 @@ fetch(`https://fakestoreapi.com/products/${params1}`)
            <div class="card-raiting">
                <p>${data.rating.rate}</p>
                <div class="card-raiting__img">
-                   <img src="./assests/images/star-solid.svg" alt="" />
+                   <img src="./assets/images/star-solid.svg" alt="" />
                </div>
            </div>
            <p class="card-description">
