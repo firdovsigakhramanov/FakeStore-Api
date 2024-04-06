@@ -107,7 +107,7 @@ header > section:first-child {
 
 .category {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 40px;
   margin: 40px auto;
   gap: 20px;
@@ -302,7 +302,6 @@ aside {
   .category {
     flex-wrap: wrap;
     background-color: white;
-    justify-content: center;
     width: 100%;
     margin: 0 0 50px 0;
     gap: 20px;
